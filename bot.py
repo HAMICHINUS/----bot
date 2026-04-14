@@ -1,4 +1,10 @@
+import sys
+import types
+
+# Python 3.14対策：audioopが削除されているためダミーを注入
+sys.modules["audioop"] = types.ModuleType("audioop")
 import discord
+
 from discord.ext import commands
 import sqlite3
 import random
